@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useContext } from "react";
 import MainContext from "../../../Context/context";
-import toast, { Toaster } from 'react-hot-toast';
+import toast  from 'react-hot-toast';
 
 const TableItem = ({ item, index }) => {
   
@@ -9,7 +9,7 @@ const TableItem = ({ item, index }) => {
   const deleteItem = (id) => {
     axios.delete(`http://localhost:3000/products/${id}`)
     .then(resp =>{
-      setData([...data.filter(x => x.id != resp.data.id)])
+      setData([...data.filter(x => x.id !== resp.data.id)])
       toast.success('item silindi')
     })
 

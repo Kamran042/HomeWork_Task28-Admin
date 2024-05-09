@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import MainContext from "../../../Context/context";
-import toast, { Toaster } from "react-hot-toast";
+import toast  from "react-hot-toast";
 
 const AddProducts = () => {
   const { data, setData } = useContext(MainContext);
