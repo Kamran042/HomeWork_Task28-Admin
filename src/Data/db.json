@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "products": [
+    {
+      "id": "f622a544-3ab5-4b04-8f90-e960f83b1596",
+      "name": "Iphone",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk0V64R_u_W2-6EpS_4-HKuRdW_SN8G5hyjBRwaMTOZQ&s",
+      "price": 2004
+    },
+    {
+      "id": "d9e9182f-c28f-42b9-a600-aebe19a000be",
+      "name": "Lenova",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUPGJxwPu34IWTBCdHTIRj8GeKQ8UEVg6cNtYh8XhRKw&s",
+      "price": 21213123
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

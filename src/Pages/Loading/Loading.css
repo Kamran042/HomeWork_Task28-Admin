@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+:root {
+	--ring: #fff;
+	--bg1: #555;
+	--bg2: #222;
+	--speed: 2s;	
+	--size: 0.55vmin;
+	--delay: calc(var(--speed) / 24);
+}
+
+
+.loading__body {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-family: 'Gochi Hand', Arial, serif;
+	transform-style: preserve-3d;
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: radial-gradient(circle at 75% 25%, var(--bg1), var(--bg2), var(--bg2));
+	perspective: 100vmin;
+}
+
+.content {
+	width: 50vmin;
+	height: 50vmin;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	perspective: 100vmin;
+	transition: all 0.5s ease 0s;
+	transform:  rotateX(180deg) rotateZ(0deg);
+	filter: drop-shadow(0vmin -0.5vmin 0.125vmin #000) drop-shadow(0vmin -2vmin 0.125vmin #000);
+}
+	
+.content:hover {
+	transform: rotateX(215deg) rotateZ(-20deg);
+}
+
+.ring {
+	--sz: 50vmin;
+	--dly: calc(var(--delay) * 0);
+	position: absolute;
+	border: var(--size) solid var(--ring);
+	border-radius: 100%;
+	width: var(--sz);
+	height: var(--sz);
+	animation: rings var(--speed) linear var(--dly) infinite alternate-reverse;
+}	
+
+.ring:nth-child(2) {
+	--sz: 48vmin;
+	--dly: calc(var(--delay) * 1);
+}	
+.ring:nth-child(3) {
+	--sz: 46vmin;
+	--dly: calc(var(--delay) * 2);
+}	
+.ring:nth-child(4) {
+	--sz: 44vmin;
+	--dly: calc(var(--delay) * 3);
+}
+.ring:nth-child(5) {
+	--sz: 42vmin;
+	--dly: calc(var(--delay) * 4);
+}
+.ring:nth-child(6) {
+	--sz: 40vmin;
+	--dly: calc(var(--delay) * 5);
+}
+.ring:nth-child(7) {
+	--sz: 38vmin;
+	--dly: calc(var(--delay) * 6);
+}
+.ring:nth-child(8) {
+	--sz: 36vmin;
+	--dly: calc(var(--delay) * 7);
+}
+.ring:nth-child(9) {
+	--sz: 34vmin;
+	--dly: calc(var(--delay) * 8);
+}
+.ring:nth-child(10) {
+	--sz: 32vmin;
+	--dly: calc(var(--delay) * 9);
+}
+.ring:nth-child(11) {
+	--sz: 30vmin;
+	--dly: calc(var(--delay) * 10);
+}
+.ring:nth-child(12) {
+	--sz: 28vmin;
+	--dly: calc(var(--delay) * 11);
+}
+.ring:nth-child(13) {
+	--sz: 26vmin;
+	--dly: calc(var(--delay) * 12);
+}
+.ring:nth-child(14) {
+	--sz: 24vmin;
+	--dly: calc(var(--delay) * 13);
+}
+.ring:nth-child(15) {
+	--sz: 22vmin;
+	--dly: calc(var(--delay) * 14);
+}
+.ring:nth-child(16) {
+	--sz: 20vmin;
+	--dly: calc(var(--delay) * 15);
+}
+.ring:nth-child(17) {
+	--sz: 18vmin;
+	--dly: calc(var(--delay) * 16);
+}
+.ring:nth-child(18) {
+	--sz: 16vmin;
+	--dly: calc(var(--delay) * 17);
+}
+.ring:nth-child(19) {
+	--sz: 14vmin;
+	--dly: calc(var(--delay) * 18);
+}
+.ring:nth-child(20) {
+	--sz: 12vmin;
+	--dly: calc(var(--delay) * 19);
+}
+.ring:nth-child(21) {
+	--sz: 10vmin;
+	--dly: calc(var(--delay) * 20);
+}
+.ring:nth-child(22) {
+	--sz: 8vmin;
+	--dly: calc(var(--delay) * 21);
+}
+.ring:nth-child(23) {
+	--sz: 6vmin;
+	--dly: calc(var(--delay) * 22);
+}
+.ring:nth-child(24) {
+	--sz: 4vmin;
+	--dly: calc(var(--delay) * 23);
+}
+.ring:nth-child(25) {
+	--sz: 2vmin;
+	--dly: calc(var(--delay) * 24);
+}
+
+@keyframes rings {
+	0% { clip-path: polygon(50% 50%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%); transform: translateZ(0);}
+	12.5% { clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%); }
+	25% { clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%, 100% 50%); }
+	37.5% { clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%);}
+	50% { clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%); transform: translateZ(3vmin); }
+	62.5% { clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 100%, 0% 100%, 0% 100%); }
+	75% { clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%, 0% 50%, 0% 50%); }
+	87.5% { clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%, 0% 0%, 0% 0%); }
+	100% { clip-path: polygon(50% 50%, 50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%, 0% 100%, 0% 50%, 0% 0%, 50% 0%); transform: translateZ(0); }
+}
