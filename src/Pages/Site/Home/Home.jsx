@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import MainContext from "../../../Context/context"
 
 const Home = () => {
-    const { data, setData } = useContext(MainContext);
+    const { data } = useContext(MainContext);
 
     return (
         <div>
@@ -20,7 +20,7 @@ const Home = () => {
                                         </div>
                                     </div>
                                     <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                        <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                        <div className="text-center"><a className="btn btn-outline-dark mt-auto" href="#!">Add to cart</a></div>
                                     </div>
                                 </div>
                             </div>
